@@ -612,7 +612,7 @@ Electronics.avm.Object.prototype.insertHTMLIntoContainer = function(usrContents)
 Electronics.avm.Object.prototype.loadTemplateParts = function()
 {
     var tmpSelf = this; 
-    var tmpParts = this.container.find('*[data-electronics="true"][data-type~="viewpart"]').andSelf().filter('*[data-electronics="true"][data-type~="viewpart"]');
+    var tmpParts = this.container.find('*[data-electronics="true"][data-type~="layoutpart"]').andSelf().filter('*[data-electronics="true"][data-type~="layoutpart"]');
     var tmpElm = null;
   
     this.jQuery.each(tmpParts, function(usrIndex, usrValue) {

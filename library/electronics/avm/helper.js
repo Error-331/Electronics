@@ -277,26 +277,34 @@ Electronics.avm.Helper.prototype.insertHTMLIntoContainer = function(usrContents)
 Electronics.avm.Helper.prototype.loadTemplateParts = function()
 {
     var tmpSelf = this; 
-    var tmpParts = this.container.find('*[data-electronics="true"][data-type~="viewpart"]').andSelf().filter('*[data-electronics="true"][data-type~="viewpart"]');
+    var tmpParts = null;
     var tmpElm = null;
-  
-    this.jQuery.each(tmpParts, function(usrIndex, usrValue) {
-        var tmpElm = tmpSelf .jQuery(usrValue);    
-        var tmpPartName = tmpElm.attr('data-layoutpartname');
+    var container = null;
+    var i = 0;
     
-        tmpPartName = tmpPartName[0].toLowerCase() + tmpPartName.substr(1);
-    
-        if (tmpPartName == undefined) {
-            return true;
-        }  
+    for (i = 0; i < this.containers.length; i++) {
+        tmpParts = this.containers[i].find('*[data-electronics="true"][data-type~="layoutpart"]').andSelf().filter('*[data-electronics="true"][data-type~="layoutpart"]');    
+        
+        if (i == 0) {   
+            this.jQuery.each(tmpParts, function(usrIndex, usrValue) {
+                var tmpElm = tmpSelf.jQuery(usrValue);    
+                var tmpPartName = tmpElm.attr('data-layoutpartname');
 
-        // Clear part
-        tmpElm = tmpSelf.jQuery('<div>').append(tmpElm.clone());
-        tmpSelf[tmpPartName] = tmpElm.html();
-        tmpElm.remove();
-    }); 
+                tmpPartName = tmpPartName[0].toLowerCase() + tmpPartName.substr(1);
     
-    tmpParts.remove();
+                if (tmpPartName == undefined) {
+                    return true;
+                }  
+
+                // Clear part
+                tmpElm = tmpSelf.jQuery('<div>').append(tmpElm.clone());
+                tmpSelf[tmpPartName] = tmpElm.html();
+                tmpElm.remove();
+            });    
+        }
+        
+        tmpParts.remove();
+    }           
 }
 
 /**
