@@ -372,6 +372,50 @@ Electronics.avm.Helper.prototype.sendEventToParent = function()
     this.parent.onEvent(tmpEvent);
 }
 
+/**
+ * Method that sends event to the parent application.
+ * 
+ * Simple method that sends event to the parent application.
+ * 
+ * @access public 
+ *    
+ * @param string|object usrEvent event name or event object.
+ * @param object usrParams user defined parameters if user event name is given.      
+ *                         
+ */  
+
+Electronics.avm.Helper.prototype.sendEventToParentApp = function()
+{
+    var tmpEvent = null;
+    var errorObj = null;
+    
+    if (arguments.length == 1) {
+        if (typeof arguments[0] == 'string') {
+            tmpEvent = this.createEventObj(arguments[0], {}, false, false);
+        } else if (typeof arguments[0] == 'object') {
+            tmpEvent = arguments[0];
+        } else {
+            errorObj = new Error('Cannot send event to parent application');
+            errorObj.number = 11608;
+            errorObj.name = 'Helper error';
+            errorObj.description = 'Invalid parameters'; 
+        
+            throw errorObj;
+        }          
+    } else if (arguments.length == 2){        
+        tmpEvent = this.createEventObj(arguments[0], arguments[1], false, false);       
+    } else {
+        errorObj = new Error('Cannot send event to parent application');
+        errorObj.number = 11608;
+        errorObj.name = 'Helper error';
+        errorObj.description = 'Invalid parameters'; 
+        
+        throw errorObj;
+    }      
+   
+    this.parentApp.onEvent(tmpEvent);
+}
+
 /* Core methods ends here */ 
 
 /* Event methods starts here */

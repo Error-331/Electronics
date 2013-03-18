@@ -308,6 +308,11 @@ View error
 Cannot send event to models broad
 Invalid parameters set
 
+11412
+View error
+Cannot send event to parent application
+Invalid parameters
+
 Model (11501 - 115nn)
 ---------------------
 
@@ -335,6 +340,11 @@ Invalid parameters set
 Model error
 Cannot send event to models broad
 Invalid parameters set
+
+11506
+Model error
+Cannot send event to parent application
+Invalid parameters
 
 Helper (11601 - 116nn)
 ----------------------
@@ -372,4 +382,9 @@ Language object for the current object is not set
 11607
 Helper error
 Cannot send event to parent
+Invalid parameters
+
+11608
+Helper error
+Cannot send event to parent application
 Invalid parameters
