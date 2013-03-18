@@ -1,0 +1,375 @@
+AVM classes (11101 - 11nnn)
+===========================
+
+Object (11101 - 111nn)
+----------------------
+
+11101
+Object error
+Cannot load layout
+Layout name is not string
+
+11102
+Object error
+Cannot load layout file
+'Layout: ' + usrLayout + ' cannot be loaded'
+
+11103
+Object error
+Container is not set
+Container for the current object is not set
+
+11104
+Object error
+Language object is not set
+Language object for the current object is not set
+
+11105
+Object error
+Cannot load language object
+'Layout: ' + langObjPath + ' cannot be loaded'
+
+11106
+Object error
+Cannot localise a string
+Parameter is not a string
+
+11107
+Object error
+Cannot localise array
+Parameter is not an object
+
+11108
+Object error
+Cannot create event object
+Event name is not a string
+
+11109
+Object error
+Cannot create event object
+User parameters is not an object
+
+11110
+Object error
+Cannot create event object
+"isBubble" parameter is not boolean
+
+11111
+Object error
+Cannot create event object
+"isPropagate" parameter is not boolean
+
+11112
+Object error
+Cannot send event to self
+Invalid parameters
+
+11113
+Object error
+Cannot add deferred object to the stack
+Provided parameter is not an object
+
+11114
+Object error
+Cannot add attribute
+Parameter is not an object 
+
+11115
+Object error
+Cannot get container contents
+Container is not an object or is not set
+
+11116
+Object error
+Cannot set object container
+Parameter is not an object
+
+11117
+Object error
+Cannot set object type
+Parameter is not a string
+
+11118
+Object error
+Cannot set object application type
+Parameter is not a string
+
+11119
+Object error
+Cannot set object version
+Parameter is not a string  
+
+11120
+Object error
+Cannot set object class name
+Parameter is not a string
+
+11121
+Object error
+Cannot set object name
+Parameter is not a string
+
+11122
+Object error
+Cannot set object language
+Parameter is not a string
+
+11123
+Object error
+Cannot set language object
+Parameter is not an object
+
+11124
+Object error
+Cannot set "replace container" parameter
+Parameter is not boolean
+
+11125
+Object error
+Cannot set "insert HTML" parameter
+Parameter is not boolean
+
+11126
+Object error
+Cannot set configuration options for the object
+Parameter is not an object
+
+11127
+Object error
+Cannot set state for the object
+Parameter is not an object 
+
+Factory (11201 - 112nn)
+-----------------------
+
+11201
+Factory error
+Cannot extract configuration properties
+Parameter is not an object
+
+11202
+Factory error
+Cannot prepare configuration properties
+Parameter is not an object
+
+11203
+Factory error
+Cannot prepare configuration properties
+Class name and object name are not set
+
+11204
+Factory error
+Cannot load apps
+Apps containers not found
+
+11205
+Factory error
+Cannot load apps
+'Duplicate app name: ' + tmpConfig.name
+
+11206
+Factory error
+Cannot load apps
+No file paths found   
+
+11207
+Factory error
+Cannot load apps
+'Cannot load classes files: ' + err.requireModules.toString();
+
+11208
+Factory error
+Cannot load views
+Views containers not found
+
+11209
+Factory error
+Cannot load views
+'Duplicate view name: ' + tmpConfig.name; 
+
+11210
+Factory error
+Cannot load views
+No file paths found
+
+11211
+Factory error
+Cannot load views
+Cannot load classes files: ' + err.requireModules.toString();
+ 
+11212
+Factory error
+Cannot load views
+Parent container is not set
+
+11213
+Factory error
+Cannot load modles
+'Cannot load classes files: ' + err.requireModules.toString();
+
+11214
+Factory error
+Cannot load helpers
+Parent container is not set
+
+11215
+Factory error
+Cannot load helpers
+Helpers containers not found
+
+11216
+Factory error
+Cannot load helpers
+Cannot load classes files: ' + err.requireModules.toString();  
+ 
+App (11301 - 113nn)
+-------------------
+
+11301
+App error
+Cannot set sibling apps
+Parameter is not an object 
+
+11302
+App error
+Cannot send event to children
+Invalid parameters set
+
+11303
+App error
+Cannot send event to siblings
+Invalid parameters set
+
+11304
+App error
+Cannot send event broad
+Invalid parameters set
+
+11305
+App error
+Cannot send event to models broad
+Invalid parameters set
+
+View (11401 - 114nn)
+--------------------
+
+11401
+View error
+Cannot set parent app
+Parameter is not an object 
+
+11402
+View error
+Cannot set parent
+Parameter is not an object
+
+11403
+View error
+Cannot send event to children
+Invalid parameters set
+
+11404
+View error
+Cannot send event to siblings
+Invalid parameters set
+
+11405
+View error
+Cannot send event broad
+Invalid parameters set
+
+11406
+View error
+Cannot send event to models
+Invalid parameters set
+
+11407
+View error
+Cannot send event to helpers
+Invalid parameters set
+
+11408
+View error
+Cannot send event to helper
+Helper name is not specified
+
+11409
+View error
+Cannot send event to helper
+Invalid parameters set
+
+11410
+View error
+Cannot send event to helper
+'Helper with name "' + arguments[0].toLowerCase() + '" does not exist'
+
+11411
+View error
+Cannot send event to models broad
+Invalid parameters set
+
+Model (11501 - 115nn)
+---------------------
+
+11501
+Model error
+Cannot set parent app
+Parameter is not an object
+        
+11502   
+Model error
+Cannot set parent
+Parameter is not an object
+
+11503
+Model error
+Cannot send event broad
+Invalid parameters set
+        
+11504
+Model error
+Cannot send event broad
+Invalid parameters set
+
+11505
+Model error
+Cannot send event to models broad
+Invalid parameters set
+
+Helper (11601 - 116nn)
+----------------------
+
+11601
+Helper error
+Cannot set parent app
+Parameter is not an object
+
+11602
+Helper error
+Cannot set parent
+Parameter is not an object
+
+11603
+Helper error
+Cannot set "isSingle" parameter
+Parameter is not boolean
+
+11604
+Helper error
+Cannot set containers
+Parameter is not an object
+
+11605
+Helper error
+Container is not set
+Containers for the current object is not set
+
+11606
+Helper error
+Language object is not set
+Language object for the current object is not set
+
+11607
+Helper error
+Cannot send event to parent
+Invalid parameters
